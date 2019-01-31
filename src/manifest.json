@@ -1,0 +1,28 @@
+{
+    "compatibleVersion": 3,
+    "bundleVersion": 1,
+    "icon": "icon.png",
+    "commands": [
+        {
+            "name": "my-command",
+            "identifier": "my-command-identifier",
+            "script": "./my-command.js"
+        },
+        {
+            "script": "./handleAllActions.js",
+            "name": "My Action Listener",
+            "handlers": {
+                "actions": {
+                    "*": "onActionHandler"
+                }
+            },
+            "identifier": "my-action-listener-identifier"
+        }
+    ],
+    "menu": {
+        "title": "my-plugin",
+        "items": [
+            "my-command-identifier"
+        ]
+    }
+}
